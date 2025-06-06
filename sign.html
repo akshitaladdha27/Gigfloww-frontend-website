@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gigfloww Sign Up</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .right {
+      flex: 1;
+      position: relative;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+    }
+
+    .circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    }
+
+
+    .logo {
+      width: 150px;
+      margin-top: -60px;
+      z-index: 1;
+    }
+
+    .right h2 {
+      margin: 0;
+      font-size: 24px;
+      z-index: 1;
+    }
+
+    .right p {
+      margin: 10px 0;
+      z-index: 1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      gap: 12px; /* Adds space between each input and label */
+      margin-top: -10px;
+    }
+
+    input {
+      padding: 12px;
+      margin: 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+        font-size: 14px;
+        text-align: left;
+        color: #000000;
+        margin-top: 4px;
+    }
+
+    .password-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .password-container input {
+        width: 100%;
+        padding-right: 40px; /* space for eye icon */
+        box-sizing: border-box;
+    }
+
+
+    .toggle-eye {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    p {
+    text-align: center;
+    margin: 10px 0;
+    }
+
+    button {
+      background-color: #005A8D; /* Brand C1 */
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .terms {
+      font-size: 12px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .terms a {
+      color: #005A8D;
+      text-decoration: none;
+    }
+
+    .login {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .login a {
+      color: #005A8D;
+      text-decoration: none;
+    }
+
+    a[href="#"] {
+     text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="sign-page-bg.jpg" alt="Teamwork" />
+    </div>
+    <div class="right">
+      <!-- Two concentric arcs using SVG -->
+    <svg class="circle" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" stroke="#005A8D" stroke-width="2" fill="none" />
+        <circle cx="100" cy="100" r="60" stroke="#005A8D" stroke-width="2" fill="none" />
+    </svg>
+
+      <img src="logo 2.png" alt="Gigfloww Logo" class="logo" /><br><br><br>
+      <h2>Welcome to Gigfloww</h2>
+      <p>Seamless HR operations start now!<br />Sign up</p><br>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Full Name" required />
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email Address" required />
+
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" placeholder="Password" id="password" required />
+          <span class="toggle-eye" onclick="togglePassword()">
+            <span id="eye">👁️</span>
+          </span>
+        </div>
+
+        <button type="submit">Sign up for free</button>
+        <p class="terms">
+          By clicking on Sign up, you agree to our <a href="#">Terms and Conditions</a>
+        </p>
+      </form>
+      <p class="login">Already on Gigfloww? <a href="#">Log in</a></p>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const eye = document.getElementById("eye");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eye.textContent = "👁️‍🗨️"; // Eye with slash
+      } else {
+        passwordInput.type = "password";
+        eye.textContent = "👁️";
+      }
+    }
+  </script>
+</body>
+</html>

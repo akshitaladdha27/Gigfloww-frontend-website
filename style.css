@@ -1,0 +1,541 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f9fbfc;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #cde1ff, #b9d2fc);
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  margin: 10px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 190px;
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e63f2;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.nav a.active {
+  background: white;
+  color: #2e63f2;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.782);
+  color: #2e63f2;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.icon-btn {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.notification-btn {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.auth-link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2e63f2;
+  background-color: #ffffff;
+  border: 1px solid #2e63f2;
+  transition: all 0.2s ease;
+}
+
+.auth-link:hover {
+  background-color: #2e63f2;
+  color: white;
+}
+
+/* Optional: Different style for register */
+.auth-link.register {
+  background-color: #2e63f2;
+  color: white;
+}
+
+.auth-link.register:hover {
+  background-color: #174dcf;
+}
+
+/*Banner*/
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin: 1rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  margin-right: 16px;
+}
+
+.banner-text {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+/* Layout */
+.main-container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Left Panel */
+.left-panel {
+  flex: 2;
+}
+
+.left-panel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+
+/* Stats Cards */
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #888;
+  margin: 0;
+}
+
+.card-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.card a {
+  color: #2e63f2;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-top: 1px solid #eee;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card a .arrow {
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+
+/* Performance Report */
+.performance-report {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.report-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.report-dropdown {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #f9f9f9;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.chart-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.y-axis {
+  width: 18px;
+  object-fit: contain;
+}
+
+.chart-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.chart-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.x-axis {
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+/* Right Panel */
+.right-panel {
+  flex: 1;
+  margin-top: 3px;
+  padding: 1rem;
+}
+
+.floating-calendar {
+  position: absolute;
+  right: 2rem;
+  top: 200px; /* Adjust based on your layout */
+  padding: 10px;
+  z-index: 10;
+}
+
+.floating-calendar img {
+  width: 180px;
+  height: 50px;
+}
+
+.action {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+  width: 470px;
+  margin: 3rem auto 0 auto;
+  box-sizing: border-box;
+}
+
+.action h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.schedule li {
+  border-bottom: 1px solid #eee;
+  padding: 0.8rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.schedule li:last-child {
+  border-bottom: none;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: 1px solid #ccc; 
+  min-width: 80px;
+}
+
+.time-block .main-time {
+  font-weight:600;
+  font-size: 0.85rem;
+}
+
+.time-block .sub-time {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.details-block {
+  flex: 1;
+}
+
+.details-block .label {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+
+.details-block .title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/*incoming application*/
+.incoming-applications {
+  max-width: 1450px; 
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
+}
+
+.incoming-applications .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.incoming-applications h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.incoming-applications p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.see-all {
+  background-color: #004c70;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.card {
+  min-width: 290px; /* Fixed width to keep cards same size */
+  max-width: 310px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.candidate {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.candidate img.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.experience .label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.company {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.company img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.date {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.view-resume {
+  margin-top: 1rem;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   border-top: 1px solid #eee;
+  padding-top: 0.75rem;
+}
+
+.view-resume span {
+  font-size: 1.2rem;
+}

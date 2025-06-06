@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gigfloww Register</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Left Section */
+    .left-section {
+      flex: 1;
+    }
+
+    .left-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Right Section */
+    .right-section {
+      flex: 1;
+      background: linear-gradient(to bottom right, #d5deeb, #6461cc);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      width: 220px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #333;
+    }
+
+    h3 {
+      font-size: 26px;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .subtext {
+      color: #666;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input {
+      padding: 12px 16px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 20px;
+      background-color: #f4f4f4;
+    }
+
+    form button {
+      background-color: #22577a; /* Brand C 1 */
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .login-text {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .login-text a {
+      color: #22577a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 20px; /* space between buttons */
+        margin-top: 30px;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* space between logo and text */
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 1px solid transparent;
+        border-radius: 19px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        background-color: transparent;
+        color: #333;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn img {
+    width: 20px;
+    height: 20px;
+    }
+
+    .google-btn {
+    color: #1D1D1D;
+    border-color: #13361C;
+    }
+
+    .google-btn:hover {
+        background-color: #e8f0fe;
+        border-color: #13361C;
+        color: #1D1D1D;
+    }
+
+    .apple-btn {
+    border-color: #13361C;
+    color: #1D1D1D;
+    }
+
+    .apple-btn:hover {
+        background-color: #f0f0f0;
+        border-color: #13361C;
+        color: #1D1D1D;
+    }
+
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-section {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section with Image -->
+    <div class="left-section">
+      <img src="register-page-bg.jpg" alt="Team working">
+    </div>
+
+    <!-- Right Section with Form -->
+    <div class="right-section">
+      <img src="logo.png" alt="Gigfloww Logo" class="logo" />
+
+      <h2>Welcome to Gigfloww</h2>
+      <h3>Register</h3>
+      <p class="subtext">Seamless HR operations start now!<br><span>Sign up</span></p>
+
+      <form>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">Register</button>
+      </form>
+
+      <p class="login-text">Already on Gigfloww? <a href="#">Log in</a></p>
+
+      <div class="button-group">
+    <button class="btn google-btn">
+      <img src="google 1.png" alt="Google logo" />
+      Register with Google
+    </button>
+    <button class="btn apple-btn">
+      <img src="apple (1) 1.png" alt="Apple logo" />
+      Register with Apple
+    </button>
+  </div>
+    </div>
+  </div>
+</body>
+</html>
